@@ -1,0 +1,60 @@
+{
+  "customers": [
+    {
+      "id": 5,
+      "fname": "Vinay",
+      "lname": "Patel",
+      "email": "user1234@mailinator.com",
+      "gender": "Male"
+    },
+    {
+      "id": 7,
+      "fname": "Pankti",
+      "lname": "Rathod",
+      "email": "rathod@gmail.com",
+      "gender": "Female"
+    },
+    {
+      "id": 8,
+      "fname": "vinay",
+      "lname": "patel",
+      "email": "user1234@mailinator.com",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "fname": "Sumeet",
+      "lname": "Shah",
+      "email": "summet@malinator.com",
+      "gender": "Male"
+    },
+    {
+      "id": 11,
+      "fname": "raj",
+      "lname": "patel",
+      "email": "raj2@mailinator.com",
+      "gender": null
+    },
+    {
+      "id": 14,
+      "fname": "viral",
+      "lname": "setty",
+      "email": "ddsdsd@gmai;l.com",
+      "gender": "Male"
+    },
+    {
+      "id": 15,
+      "fname": "Abhshek",
+      "lname": "Shah",
+      "email": "abhisheks1shah@gmail.com",
+      "gender": "Male"
+    },
+    {
+      "id": 16,
+      "fname": "darshan",
+      "lname": "patel",
+      "email": "vinayvhc38@gmail.com",
+      "gender": null
+    }
+  ]
+}

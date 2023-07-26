@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+// scss files
+@import "src/assets/scss/base/index";
+@import "src/assets/scss/vendor/bootstrap-base";
+@import "src/assets/scss/vendor/bootstrap-components";
+@import "src/assets/scss/component/index";
+@import "src/assets/scss/layout/index";
+@import "src/assets/scss/utilities/index";
+
+

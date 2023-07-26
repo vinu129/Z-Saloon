@@ -1,0 +1,127 @@
+<div class="d-flex align-items-center">
+    <h3>Customers</h3>
+    <!--Open added customer modal -->
+    <button type="button" (click)="addCustomer()" class="addCustomer-btn btn btn-secondary" data-toggle="modal"
+        data-target="#addCustomerModal">
+        <span class="addCustomer-icon"> +</span>
+        Add Customer
+    </button>
+</div>
+<div class="customer-list-container">
+    <div class="customer-list">
+        <div class="search-bar position-relative">
+            <input tabindex="" type="text" autocomplete="off" placeholder="Search" class="search-box">
+            <i class="fa fa-search search-icon"></i>
+        </div>
+        <table class="customer-table table">
+            <thead>
+                <tr>
+                    <!-- <th></th> -->
+                    <th scope="col">Customer</th>
+                    <th scope="col"># of Appointments</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Created</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of custData">
+                    <!-- <td>{{row.id}}</td> -->
+                    <td>
+                        <span class="user-prefix">
+                            {{row.fname | getFirstLetter |titlecase }}{{row.lname | getFirstLetter |titlecase }}
+                        </span>
+                        <span>
+                            {{row.fname | titlecase}} {{row.lname | titlecase}}</span>
+                    </td>
+                    <td>0</td>
+                    <td>{{row.email}}</td>
+                    <td>{{today | date:"MMMM d, y"}}</td>
+                    <td>
+                        <div class="dropdown d-flex">
+                            <a class="table-action-dropdown dropdown-toggle h-100" href="#" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                <span>...</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomerModal"
+                                    (click)="editCustomer(row)">
+                                    <i class="fa fa-pencil edit-icon mr-2"></i>
+                                    Edit Customer
+                                </a>
+                                <a class="dropdown-item text-danger" href="#" (click)="deleteCustomer(row)">
+                                    <i class="fa fa-trash-o delete-icon mr-2"></i>
+                                    Delete Customer
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div *ngFor="let row of custData">
+                <div>{{row.name}}</div>
+            </div> -->
+    </div>
+</div>
+
+
+<!--Add Customer Modal -->
+<div class="modal fade" id="addCustomerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 *ngIf="showAdd" class="modal-title" id="exampleModalLabel">Add New Customer</h5>
+                <h5 *ngIf="showUpdate" class="modal-title" id="exampleModalLabel">Edit Customer</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="customerDetail">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="first-name">First Name</label>
+                            <input type="text" formControlName="fname" class="form-control" id="first-name"
+                                aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" formControlName="lname" class="form-control" id="last-name"
+                                aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" formControlName="email" class="form-control" id="email"
+                                aria-describedby="emailHelp">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleFormControlSelect1">Gender</label>
+                            <select class="form-control" formControlName="gender" id="gender">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" *ngIf="showAdd" class="btn btn-primary" (click)="postCustomer()"
+                            data-dismiss="modal">Add</button>
+                        <button type="button" *ngIf="showUpdate" class="btn btn-primary" (click)="updateCustomer()"
+                            data-dismiss="modal">Update</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

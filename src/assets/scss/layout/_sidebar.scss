@@ -1,0 +1,32 @@
+.sidebar{
+  width: $sidebar-width;
+  & .nav-item .nav-link{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    font-weight: 500;
+    line-height: 12px;
+    opacity: .85;
+    flex-direction: column;
+    padding: 12px 0;
+  
+    & i{
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    &:hover,
+    &.active,
+    &:active{
+      color: #fff;
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.18);
+    }
+  }
+}
+.site-logo{
+  width: 36px;
+  display: flex;
+  align-items: center;
+  margin: 12px auto;
+}

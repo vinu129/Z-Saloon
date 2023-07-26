@@ -1,0 +1,80 @@
+.header{
+    height: $header-height;
+}
+.header {
+    background-color: #fbfbfc;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 1px rgba(0, 18, 79, 0.08);
+    flex-shrink: 0;
+    // position: fixed;
+    width: 100%;
+}
+.header #booking-btn {
+    margin-right: 8px;
+}
+button.dropdown-toggle::after {
+    content: none;
+}
+.palette-img-icon {
+    width: 24px;
+}
+.user-profile {
+    background-color: rgb(99, 230, 190);
+    color: rgb(19, 150, 110);
+    font-size: 14px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+    font-weight: 600;
+    border-radius: 50%;
+}
+.user-dropdown a {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #dee1e6;
+}
+.user-dropdown a:hover {
+    text-decoration: none;
+}
+.user-name {
+    line-height: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.header-icon-buttons {
+    padding: 8px 16px;
+    border-left: 1px solid #dee1e6;
+    gap: 16px;
+}
+.header-icon-buttons .btn {
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    color: #334363;
+    &:hover{
+        background-color:#edeff3 ;
+    }
+    &:nth-child(3){
+        font-size: 20px;
+    }
+}
+
+.header-icon-buttons .btn.trophy-btn {
+    color: #18ca75;
+}
+.user-dropdown .dropdown-toggle::after{
+    content :'\f107';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    border: 0;
+    color: #99a1b1;
+}
