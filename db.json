@@ -34,27 +34,6 @@
       "lname": "patel",
       "email": "raj2@mailinator.com",
       "gender": null
-    },
-    {
-      "id": 14,
-      "fname": "viral",
-      "lname": "setty",
-      "email": "ddsdsd@gmai;l.com",
-      "gender": "Male"
-    },
-    {
-      "id": 15,
-      "fname": "Abhshek",
-      "lname": "Shah",
-      "email": "abhisheks1shah@gmail.com",
-      "gender": "Male"
-    },
-    {
-      "id": 16,
-      "fname": "darshan",
-      "lname": "patel",
-      "email": "vinayvhc38@gmail.com",
-      "gender": null
     }
   ]
 }
